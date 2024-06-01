@@ -23,9 +23,11 @@ def analyze():
     for i in range(10):
         strip_region = image[i * strip_height:(i + 1) * strip_height, :]
         avg_color = strip_region.mean(axis=0).mean(axis=0)
-        colors[labels[i]] = avg_color.tolist()
+        # Convert average color values to list of integers
+        colors[labels[i]] = avg_color.astype(int).tolist()
     
     return json.dumps(colors)
 
 if __name__ == '__main__':
     app.run(port=5001)
+
