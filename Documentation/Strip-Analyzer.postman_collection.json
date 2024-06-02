@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "35424781-2106-464c-8c04-3bd30590a9fd",
+		"name": "Strip-Analyzer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24106690"
+	},
+	"item": [
+		{
+			"name": "Upload Urine Strip Image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1ef2040f-953f-4700-9985-9de1f08df9c7"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/upload?image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"upload"
+					],
+					"query": [
+						{
+							"key": "image",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Upload Urine Strip Image",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1ef2040f-953f-4700-9985-9de1f08df9c7"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/upload?image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"upload"
+							],
+							"query": [
+								{
+									"key": "image",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "260"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"104-q4OMrrTjjGHyIG80JD3L+2BAh5E\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Jun 2024 19:16:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"URO\": [158,164,171],\n    \"BIL\": [158,165,172],\n    \"KET\": [150,165,171],\n    \"BLD\": [165,173,178],\n    \"PRO\": [164,172,175],\n    \"NIT\": [155,165,169],\n    \"LEU\": [164,172,179],\n    \"GLU\": [181,183,187],\n    \"SG\": [183,184,188],\n    \"PH\": [185,186,190]\n}"
+				}
+			]
+		},
+		{
+			"name": "Analyze Image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"file_path\": \"C:/Users/simra/Downloads/strip_images/image4.jpg\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/analyze",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"analyze"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"file_path\": \"C:/Users/simra/Downloads/strip_images/image4.jpg\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/analyze",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"analyze"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.3 Python/3.10.11"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Jun 2024 18:47:32 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "280"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"URO\": [164, 171, 177],\n    \"BIL\": [166, 174, 178],\n    \"KET\": [161, 174, 178],\n    \"BLD\": [171, 180, 184],\n    \"PRO\": [164, 173, 175],\n    \"NIT\": [153, 164, 169],\n    \"LEU\": [161, 167, 171],\n    \"GLU\": [172, 173, 174],\n    \"SG\": [171, 173, 173],\n    \"PH\": [170, 173, 174]\n}"
+				}
+			]
+		}
+	]
+}
