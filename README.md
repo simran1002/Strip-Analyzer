@@ -13,6 +13,7 @@ Strip Analyzer is a Flask application that analyzes vertical strips in an image 
 1. Clone the repository:
 
    git clone https://github.com/simran1002/Strip-Analyzer.git
+   
    cd stripAnalyzer
 
 
