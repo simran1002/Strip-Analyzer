@@ -80,7 +80,6 @@ urine-strip-analyzer/
 │   └── package.json         # Node.js dependencies and scripts
 │
 └── README.md                # Project documentation
-
 API Endpoints
 POST /api/upload
 Description: Uploads an image file for analysis.
